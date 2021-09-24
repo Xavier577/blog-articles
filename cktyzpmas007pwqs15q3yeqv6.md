@@ -106,7 +106,10 @@ our package.json should look like this
 <li>dev is to run our app in development</li>
 </ul>
 
+
 <h1> Generating our tsconfig file </h1>
+
+
 
 Normally we would run `tsc --init` to create our tsconfig.json file but in this tutorial i would use a library created by one of my favourite youtubers ([Ben Awad](https://www.youtube.com/c/BenAwad97)) called tsconfig.json.
 To use the package we'll run:
@@ -122,22 +125,16 @@ I'll select nodejs and that should create a tsconfig for us.
 
 ![tsconfig_benawad.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1632521166007/dGNke16s8.png)
 
+
 so it contains some set rule for our project, feel free to change whatever you like to your liking but the most important options here are "outDir" which tells the typescript compiler where to compile our javascript file, "excludes" which tells typescript what files to ignore, "include" tells typescript what files to check during compilation, "target" the version of javascript we are compiling to (which Ben has set to es2017) and "module" which tells typescript what module syntax should be used.
 <br/>
 The "outDir" has been set to dist but you can name it whatever you want (but remember to change that in the package.json file) but by convention it is usually best practise to call it dist or build.
 <br/>
 
-we are gonna want to include the dist folder to the .gitignore file as this folder is only needed during deployment
+we are gonna want to include the dist folder to the .gitignore file as this folder is only needed during deployment .
+ 
 
-
-```
-
-// (in .gitignore)
-node_modules
-dist
-```
-
-# Creating our source folder
+<h2>Creating our source folder </h2>
 
 First we are gonna want to create a folder called "src", this is where we would write all our typescript code
 
