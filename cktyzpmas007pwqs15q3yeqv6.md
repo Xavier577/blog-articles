@@ -1,6 +1,6 @@
 ## Setting up a nodejs project with typescript and deploying to heroku
 
-Setting up nodejs with typescript can be quite troublesome if not done properly. To make this worse you probably won't see the issue with the way you set your project up until you want to deploy it. Today we are gonna go over how exactly we can set up nodejs with typescript in a way that would make deployment easy.
+Setting up nodeJs with typescript can be quite troublesome if not done properly. To make this worse you probably won't see the issue with the way you set your project up until you want to deploy it. Today we are gonna go over how exactly we can set up nodeJs with typescript in a way that would make deployment easy.
 
 # Getting started
 
@@ -21,12 +21,12 @@ For this tutorial we are gonna be using the following packages:
 we are going to initialize the project with yarn and git
 
 ```
-yarn init -y
+$ yarn init -y
 
 ```
 
 ```
-git init
+$ git init
 
 ```
 
@@ -39,21 +39,21 @@ we should have our package.json file create for us like so
 To make our lives easier let's install express
 
 ```
-yarn add express
+$ yarn add express
 
 ```
 
 > Installing typescript and ts-node as dev dependencies
 
 ```
-yarn add -D typescript ts-node
+$ yarn add -D typescript ts-node
 
 ```
 
 > installing the type definition for node and express
 
 ```
-yarn add -D @types/node @types/express
+$ yarn add -D @types/node @types/express
 
 ```
 
@@ -61,7 +61,7 @@ yarn add -D @types/node @types/express
 
 ```
 
-yarn add -D nodemon
+$ yarn add -D nodemon
 
 ```
 
@@ -115,7 +115,7 @@ Normally we would run `tsc --init` to create our tsconfig.json file but in this 
 To use the package we'll run:
 
 ```
-npx tsconfig.json
+$ npx tsconfig.json
 
 ```
 
@@ -200,7 +200,7 @@ first i am gonna run the build command so that we can see how our app would be b
 we'll run:
 
 ```
-yarn run build
+$ yarn run build
 
 ```
 
@@ -228,7 +228,7 @@ via the heroku-cli. If you don't have installed you can install it with `npm ins
 <h2>Adding changes to git</h2>
 
 ```
-git add .
+$ git add .
 ```
 
 </li>
@@ -236,7 +236,7 @@ git add .
  <h2>Committing changes</h2>
 
 ```
-git commit -am "deploy"
+$ git commit -am "deploy"
 ```
 
 </li>
@@ -251,7 +251,7 @@ git commit -am "deploy"
   <h2>Pushing to heroku</h2>
 
 ```
-git push heroku master
+$ git push heroku master
 ```
 
 ![deploying1.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1632522649820/btsEx5kyM.png)
