@@ -147,7 +147,7 @@ app.get("/api/photos", async (_req: Request, res: Response, next: Next) => {
   const retrievePhotosFromCache = async () => RedisClient.get("photos")
   const { result: cachedPhotos, error: cacheRetrieveError } = await AsyncWrapper(retrievePhotosFromCache);
   
-  if (cacheRetrieveError) return next(cacheRetrieveError);
+  if (cacheRetrieveError) co sole.error(cacheRetrieveError);
   if (cachedPhotos) return res.json(JSON.parse(cachedPhotos));
 
   const url = "https://jsonplaceholder.typicode.com/photos";
