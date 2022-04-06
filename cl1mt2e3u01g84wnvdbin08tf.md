@@ -111,7 +111,7 @@ $ yarn add ioredis
 
 ```
 # on Mac and Linux
-$ redis-server --demonize yes 
+$ redis-server --daemonize yes 
 ```
 
 > Let's modify our code to use caching
