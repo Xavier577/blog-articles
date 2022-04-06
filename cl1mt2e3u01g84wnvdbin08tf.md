@@ -203,7 +203,7 @@ Of the 4 tests we did,the response times were  `198ms`, `117ms`, `78ms`, and `84
 
 ### conclusion
 
-We have seen that the response time of our server can be significantly improved with caching (check out the codename on [github](https://github.com/Xavier577/reponse_time_improvement_with_caching)). The are other usecases for caching such as caching request on a NGNIX server, caching static assets on a CDN and so on. They also other server optimization techniques such as load balancing, using clusters and so on. This was just a basic usecase but we learnt from it, we'll meet again in the next one.
+We have seen that the response time of our server can be significantly improved with caching (check out the codename on [github](https://github.com/Xavier577/reponse_time_improvement_with_caching)). The are other usecases for caching such as caching request on a NGNIX server, caching static assets on a CDN and so on. Caching works well to reduce latency in web servers. Other server optimization techniques such as load balancing, using clusters/child processes and so on. This was just a basic usecase but we learnt from it, we'll meet again in the next one.
 
 
 
