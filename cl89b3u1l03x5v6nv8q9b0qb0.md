@@ -1,4 +1,4 @@
-## Using absolute paths with typescript.
+## Using absolute paths in typescript.
 
 # Intro
 
