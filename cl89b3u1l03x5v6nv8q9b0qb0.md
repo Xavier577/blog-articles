@@ -103,7 +103,7 @@ This can get really messy especially when we have deeply nested files.
 import somthing from "../../../../../somewhere/something";
 ```
 
-## Configuring Typescript to use absolute paths
+# Configuring Typescript to use absolute paths
 To enable Typescript to make use of absolute paths to import modules, first go into your tsconfig.json file.
 
 ```
@@ -220,12 +220,12 @@ const Communities: NextPage = () => {
 
 export default Communities;
 ```
-## why use the `@` prefix
+# why use the `@` prefix
 This is largely a matter of personal preference, and your reference does not have to begin with `'@'`; it can simply be the name of your file, or you can call it whatever you want as long as it is an alpha-numeric character or a string that can be a valid JSON key.
 
-## Why use absolute paths
+# Why use absolute paths
 This is a subtle feature, but it can help with code readability and overall cleaner imports.
 
 
-## Conclusion
+# Conclusion
 Typescript is a wonderful programming language with tons of great features. Absolute paths have no effect on your code in runtime; it's more of a code readability thing. There are other features that do add a lot to your code, such as decorators, enums, abstract classes, and so on. This is only scratching the surface.
