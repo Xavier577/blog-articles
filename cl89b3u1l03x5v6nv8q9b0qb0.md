@@ -1,8 +1,8 @@
-## Using absolute paths with the in typescript.
+## Using absolute paths with typescript.
 
 # Intro
 
-Working extensively with typescript for quite some time now being someone who adopted typescript at an early stage in my career (just 4 months after learning Javascript). I have learned and benefited a lot from the features typescript offers one of them being able to use absolute paths to import modules. This feature is also available in Javascript as well but in this guide, I would mostly be talking about Typescript (no harsh feeling JS) and my IDE of choice is Vscode which this feature works without any additional configuration, In other editors like WebStorm, you may have to do some extra configurations to make this work more on that in this article written by [Aman Kumar](https://medium.com/geekculture/making-life-easier-with-absolute-imports-react-in-javascript-and-typescript-bbdab8a8a3a1).
+Working extensively with typescript for quite some time now being someone who adopted typescript at an early stage (just 4 months after learning Javascript). I have learned and benefited a lot from the features typescript offers, one of them is being able to use absolute paths to import modules. This feature is also available in Javascript as well but in this guide, I would mostly be talking about Typescript (no harsh feeling JS) and my IDE of choice is Vscode which this feature works without any additional configuration, In other editors like WebStorm, you may have to do some extra configurations to make this work more on that in this article written by [Aman Kumar](https://medium.com/geekculture/making-life-easier-with-absolute-imports-react-in-javascript-and-typescript-bbdab8a8a3a1).
 
 # The tsconfig.json file
 If you have worked with typescript for some amount of time, you would most likely have encountered this file. Similar to the package.json file or a docker file (for docker configs), this is where the configurations for your typescript compilation are written. You can generate this file with the `tsc --init` command but most frameworks using typescript would package this file for you.
