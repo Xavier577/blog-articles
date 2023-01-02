@@ -58,6 +58,7 @@ Another challenge I faced was taking on too many projects at once, this affected
 
 If I have learned anything so far during the past 2 years is that there's nothing special about programming, anyone can learn anything and if you put in the work in the right places then you will see results.
 
+
 ## Moving forward
 
 It's been a fun 2 years, there were highs and lows. I learned a lot and made a lot of mistakes but I am grateful for everything. I am not changing much moving forward (at the moment at least), I will continue learning and prioritizing my competence. The only few things I would be changing are the volume at which I push content, contribute to open source, and do community work. I want to do more of that, I want to impact others, grow my income and become a top-level software engineer. "The best time was 2 years ago the second best time is now".
