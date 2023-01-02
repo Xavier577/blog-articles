@@ -22,12 +22,14 @@ Hello there, today we'll be taking a look at my journey in the field of software
 <summary>Jan 2022: Got an internship</summary>
 <p>It's the start of Q1 2022 and I get my first full-time offer to work remotely as an intern at Gtext Soft inc (A real estate company based in Dubai) as a full-stack software engineer.</p>
 </details> 
+
 <details>
 <summary>Apr 2022: Quit my job at Gtext</summary>
 <p>
 I rejected a return offer at Gtext because they wanted me to work onsite and I wasn't satisfied with the role I played at Gtext, I didn't like the type of work I was doing so I decided not to continue and just upskilled myself so I could apply for backend only roles.
 </p>
 </details> 
+
 <details>
 <summary>May-December 2022: It all started to click </summary>
 <p>After a difficult period after quitting my job at Gtext soft, I continued to upskill, expand my network and build my project. I worked at 3 different companies within this period the last one being the one I am still currently in. I worked as a frontend developer in one of them which was an early-stage startup and a backend developer (which is my preferred role) in the rest. I learned a lot about working with a team, setting and meeting up with milestones, the importance of communication in the teams I have worked with, and so on.</p>
