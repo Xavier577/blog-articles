@@ -93,6 +93,27 @@ John.email = 1; // compiler error: Cannot assign to 'email' because it is a read
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1675109360080/e960a067-25f8-4c86-bf05-775b0d04a87b.png align="center")
 
+* `Pick<Type, Keys>` : This creates a type by picking the keys (which is the second argument of the generic) from the type (which is an interface or object type).
+    
+
+```ts
+interface Person {
+	id: number;
+	email: string;
+	bio: string;
+	age: number;
+};
+
+type PersonProfile = Pick<Person, "email" | "bio">;
+
+const jamesProfile: PersonProfile = {
+	email: "james@gmail.com",
+	bio: "I love cats"
+};
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1675255595881/10fbe8af-84c6-4ef9-a2c6-34774a1a1a69.png align="center")
+
 ## Let's create our own utility Type
 
 In some cases, you may need to create custom utility types that are not provided by TypeScript by default. This can be done by combining type features such as generics, condition typing, type aliases and so on.
@@ -104,23 +125,25 @@ The type we would be creating is a solution to a twitter post I came across.
 so from this we are gonna be creating a utility type which would generate a type which is the odd property between two objects, hence the "Diff" or let's just say the difference between two object types. Let's get into the code snippet before I get to the breakdown of it.
 
 ```ts
-type Diff<A,B> = A extends B ? Omit<A, keyof B> : Omit<B, keyof A>;
+type Diff<A,B> = Pick<A & B, keyof (Omit<A, keyof B> & Omit<B, keyof A>)>;
 
-interface A  {
-    a: string;
-    b: string;
-    c: string;
+interface A  {
+    a: string;
+    b: string;
+    c: string;
 };
 
 interface B {
-    a: string;
-    b: string;
+    a: string;
+    b: string;
+    d: string;
 };
-   
+
 type C = Diff<A,B>;
 
-const c: C = {
-	c: "c"
+const justC: C = {
+    c: "c",
+    d: "d"
 };
 ```
 
@@ -128,19 +151,19 @@ so here was my solution to it. It might look funny at first but it quite simple.
 
 * First, we must remember that Utility types make use of generics so our two arguments of the generic `A` and `B` represent the two object types.
     
-* Then we made use of conditional typing to check if `A` extends `B` which means A is derived type of `B` meaning it has all the properties of `B` .
+* So then we pick the difference in properties using the `Pick` utility type. Which is what `Pick<A & B, keyof (Omit<A, keyof B> & Omit<B, keyof A>)>` this does (we'll get to that in a bit.)
     
-* If `A` does extend `B` that would mean `A` has all the properties of `B` and a few new properties so we use `Omit` to remove all the properties of `A` that are in `B` (we used `Omit<A, keyof B>` to remove all the properties in `A` that has the same key as the property in `B`) leaving behind only the properties in `A` that are not in `B`.
+* The first argument in `Pick<A & B, keyof (Omit<A, keyof B> & Omit<B, keyof A>)>` is the union of the types `A` and `B` (`A & B` as it is in typescript) which is a type that contains all the properties in `A` and in `B` .
     
-* If `A` does not extend `B` it would mean that `B` has properties that are not present in `A` so we then use `Omit` to remove all the properties of `B` that are in `A` leaving behind only properties in `B` that are not in `A`.
+* The second argument in `Pick<A & B, keyof (Omit<A, keyof B> & Omit<B, keyof A>)>` is the key to all the different properties in `A` and `B` (properties in `A` that are not in `B` and vice versa) which is what the union type of `Omit<A, keyof B> & Omit<B, keyof A>` represents (for `Omit<A, keyof B>` we removed all the properties in `B` that are in `A` using the `keyof` operator to reference the keys of the properties of `B` so we can remove them from `A` and for `Omit<B, keyof A>` we removed all the properties in `A` that are in `B` using the `keyof` operator to reference the keys of the properties of `A` so we can remove them from `B`) which we then use the `keyof` operator to get the keys of the different properties.
     
 
 That's just about it, it's not as complicated as it might look.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1675110804555/cee8b6ae-a148-4ca5-81d2-34ec513f26cc.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1675257099635/70b40f68-1726-426e-88a7-6826bee46114.png align="center")
 
 ## Conclusion
 
-Utility Types in TypeScript are a powerful feature that can be used to manipulate existing types and create new types in a type-safe manner. TypeScript provides a number of built-in utility types that can be used in different parts of your application, and it's also possible to create custom utility types when needed.
+Utility Types in TypeScript are a powerful feature that can be used to manipulate existing types and create new types in a type-safe manner. TypeScript provides several built-in utility types that can be used in different parts of your application, and it's also possible to create custom utility types when needed.
 
-In conclusion, Utility Types can greatly improve the quality of your code, making it easier to write generic code and ensuring type safety. Until the next one :) .
+In conclusion, Utility Types can greatly improve the quality of your code, making it easier to write generic code and ensuring type safety. Until the next one :).
