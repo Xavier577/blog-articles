@@ -4,6 +4,10 @@ Typescript offers a few useful features which enhance developer productivity wor
 
 In this article, we would be going over a few in-built utility types, and how to use them, and also we would be creating one to demonstrate how we can use them to create new types. If you want to learn more about in-built utility types that are not covered in this article, you can check out the [utility types section](https://www.typescriptlang.org/docs/handbook/utility-types.html) in type typescript documentation.
 
+## Prerequisite
+
+Moving forward in this article we are gonna assume we are familiar with fundamental Typescript concepts such as its [basic types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) (like `string`, `number`, and so on), [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html), [interfaces and object types](https://www.typescriptlang.org/docs/handbook/2/objects.html). If you know most of these things then you are good to go : )
+
 ## Let's dive into some utility types
 
 * `Partial<Type>`: We can use the `Partial` type to make all properties of a type optional which is the equivalent of making all the properties optional. Let's take a look at an example:
