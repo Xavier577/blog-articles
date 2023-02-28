@@ -1,7 +1,5 @@
 # How to containerize a NestJs app with Docker
 
-## Introduction
-
 In this article, we would be containerizing a nestjs application that uses a Postgresql database with docker. Containerization has become crucial in ensuring apps the apps we build run anywhere without having to worry about platform compatibility. This guide is not an introduction to docker or nestjs so we would assume we are familiar with the basics of [nestjs](https://docs.nestjs.com/), docker, and [docker-compose](https://docs.docker.com/compose/) (we use docker-compose in this guide to make our lives easier).
 
 ## Pre-requisite
