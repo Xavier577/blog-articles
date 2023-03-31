@@ -406,19 +406,19 @@ Prisma schema loaded from prisma/postgres/schema.prisma
 
 ✔ Generated Prisma Client (4.12.0 | library) to ./node_modules/@prisma/postgres/client in 104ms
 You can now start using Prisma Client in your code. Reference: https://pris.ly/d/client
-\```
+`
 import { PrismaClient } from './node_modules/@prisma/postgres/client'
 const prisma = new PrismaClient()
-\```
+`
 Environment variables loaded from .env
 Prisma schema loaded from prisma/mongo/schema.prisma
 
 ✔ Generated Prisma Client (4.12.0 | library) to ./node_modules/@prisma/mongo/client in 102ms
 You can now start using Prisma Client in your code. Reference: https://pris.ly/d/client
-\```
+`
 import { PrismaClient } from './node_modules/@prisma/mongo/client'
 const prisma = new PrismaClient()
-\```
+`
 Done in 3.07s.
 ```
 
