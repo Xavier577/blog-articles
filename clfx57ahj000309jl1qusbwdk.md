@@ -1,8 +1,8 @@
 ---
-title: "How to setup prima to use two different databases in nestjs"
+title: "How to setup prisma to use two different databases in nestjs"
 datePublished: Fri Mar 31 2023 22:55:03 GMT+0000 (Coordinated Universal Time)
 cuid: clfx57ahj000309jl1qusbwdk
-slug: how-to-setup-prima-to-use-two-different-databases-in-nestjs
+slug: how-to-setup-prisma-to-use-two-different-databases-in-nestjs
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1680304291093/2406949c-7a26-4e1b-b930-cb2e8c15bb81.png
 tags: postgresql, mongodb, databases, nestjs, prisma
 
